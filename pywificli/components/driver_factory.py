@@ -10,7 +10,6 @@ from packaging.version import Version
 
 from pywificli.domain.driver import IWifiDriver
 from pywificli.domain.metadata import DriverType, SystemLanguage
-from pywificli.drivers.english import linux_wpa
 from pywificli.drivers.english import (
     EnglishLinuxNmcliLegacy,
     EnglishLinuxWindows,
@@ -77,10 +76,10 @@ class WifiDriverFactory:
             ctrl_wifi = await cmdOkOrRaise("nmcli general permissions |grep enable-disable-wifi")
             scan_wifi = await cmdOkOrRaise("nmcli general permissions |grep scan")
 
-            if not "yes" in ctrl_wifi.stdout_or_raise or not "yes" in scan_wifi.stdout_or_raise:
+            if not "yes" in ctrl_wifi.stdout or not "yes" in scan_wifi.stdout:
                 await self._sudo_from_stdin()
 
-            version = (await cmdOkOrRaise("nmcli --version")).stdout_or_raise.split()[-1]
+            version = (await cmdOkOrRaise("nmcli --version")).stdout.split()[-1]
             # On RHEL based systems, the version is in the form of 1.44.2-1.fc39
             # wich raises an error when trying to compare it with the Version class
             if any(c.isalpha() for c in version):

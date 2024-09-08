@@ -43,6 +43,7 @@ class Logger:
         self.modules = modules or self.modules
         self.handlers: list[logging.Handler] = []
 
+        logger.setLevel(logging.DEBUG)
         self.file_handler: logging.Handler | None
         if output:
             # Logging to file with millisecond timing
@@ -66,7 +67,6 @@ class Logger:
         self.stream_handler.setLevel(logging.INFO)
         logger.addHandler(self.stream_handler)
         self.addLoggingHandler(self.stream_handler)
-
         traceback.install()  # Enable exception tracebacks in rich logger
 
     @classmethod
@@ -95,6 +95,7 @@ class Logger:
         # Enable / disable logging in modules
         for module in self.modules:
             l = logging.getLogger(module)
+            l.setLevel(logging.DEBUG)
             l.addHandler(handler)
 
 
@@ -120,8 +121,6 @@ def setup_logging(
     """
     if isinstance(base, str):
         base = logging.getLogger(base)
-    elif not isinstance(base, logging.Logger):
-        raise TypeError("Base must be of type logging.Logger or str")
     l = Logger(base, output, modules)
     return l.logger
 

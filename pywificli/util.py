@@ -34,7 +34,12 @@ class CmdResult:
         return self.stdout
 
 
-async def cmdOkOrRaise(command: str) -> CmdResult:
+@dataclass
+class CmdResultOk(CmdResult):
+    stdout: str
+
+
+async def cmdOkOrRaise(command: str) -> CmdResultOk:
     """Run a command in a subprocess and return its result.
 
     Args:
@@ -65,7 +70,7 @@ async def cmdOkOrRaise(command: str) -> CmdResult:
     if stderr:
         logger.warning(f"[stderr]\n{stderr.decode()}")
 
-    return CmdResult(
+    return CmdResultOk(
         return_code=return_code,
         stdout=stdout.decode(),
         stderr=stderr.decode() if stderr else None,
