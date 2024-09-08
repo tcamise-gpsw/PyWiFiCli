@@ -49,7 +49,7 @@ class IWifiDriver(ABC):
 
     @property
     @abstractmethod
-    def language(self) -> SystemLanguage:
+    def system_language(self) -> SystemLanguage:
         """The system language of this driver
 
         Returns:
@@ -65,7 +65,7 @@ class IWifiDriver(ABC):
         """
 
     @abstractmethod
-    async def is_adapter_enabled(self, interface: str) -> bool:
+    async def is_enabled(self, interface: str) -> bool:
         """Is the Wifi Adapter currently enabled?
 
         Args:

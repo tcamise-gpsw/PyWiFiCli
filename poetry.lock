@@ -617,7 +617,7 @@ files = [
 name = "packaging"
 version = "24.1"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
@@ -1247,4 +1247,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "74e57d216f19fd9206fd7efe669380792cce1c758ccdd07b3086fcecdf2f5845"
+content-hash = "830d05e8f7900dfc3d655f34a3a26fecb8e662b1e76477816b8f455d9597ee07"

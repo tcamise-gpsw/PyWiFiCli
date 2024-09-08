@@ -6,7 +6,7 @@ import enum
 class SystemLanguage(enum.Enum):
     """System language for a given Wifi Driver"""
 
-    ENGLISH = enum.auto()  # TODO we'll probably want a value here.
+    ENGLISH = "en_US"
 
 
 class DriverType(enum.Enum):

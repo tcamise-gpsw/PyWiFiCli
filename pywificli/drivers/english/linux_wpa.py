@@ -1,10 +1,10 @@
-"""Windows driver for English System Language"""
+"""Linux WPA driver for English System Language"""
 
 from pywificli.domain.driver import ConnectionState, IWifiDriver, ScanResult, ScanState
 from pywificli.domain.metadata import DriverType, SystemLanguage
 
 
-class EnglishLinuxWindows(IWifiDriver):
+class EnglishLinuxWpa(IWifiDriver):
     @property
     def driver_type(self) -> DriverType:
         return DriverType.LINUX_NMCLI_LEGACY
@@ -36,6 +36,3 @@ class EnglishLinuxWindows(IWifiDriver):
 
     async def enable(self, interface: str, enable: bool) -> bool:
         return await super().enable(interface, enable)
-
-
-from pywificli.domain.metadata import DriverType, SystemLanguage
