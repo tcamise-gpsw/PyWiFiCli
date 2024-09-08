@@ -47,11 +47,11 @@ class EnglishLinuxWindows(IWifiDriver):
 </WLANProfile>"""
 
     @property
-    def driver_type(self) -> DriverType:
+    def _driver_type(self) -> DriverType:
         return DriverType.LINUX_NMCLI_LEGACY
 
     @property
-    def system_language(self) -> SystemLanguage:
+    def _system_language(self) -> SystemLanguage:
         return SystemLanguage.ENGLISH
 
     # TODO move parsing out of here

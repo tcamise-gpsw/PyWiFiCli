@@ -9,7 +9,7 @@ from shutil import which
 
 from packaging.version import Version
 
-from pywificli.domain.driver import IWifiDriver
+from pywificli.domain.driver import IWifiDriver, IWifiInterfaceController
 from pywificli.domain.metadata import DriverType, SystemLanguage
 from pywificli.drivers.english import (
     EnglishLinuxMacOs,
@@ -26,7 +26,7 @@ class WifiDriverFactory:
     """Factory to discover and configure a Wifi Driver
 
     Args:
-        sudo_password (str | None, optional): TODO. Defaults to None.
+        sudo_password (str | None): TODO. Defaults to None.
     """
 
     _driver_map: dict[tuple[SystemLanguage, DriverType], type[IWifiDriver] | None] = {
@@ -114,3 +114,11 @@ class WifiDriverFactory:
         # TODO Do sudo stuff
         driver = driverT()
         return driver
+
+
+class WifiInterfaceControllerFactory:
+    def __init__(self) -> None:
+        pass
+
+    async def get_interface_controller(self, interface: str) -> IWifiInterfaceController: ...
+    async def get_first_interface_controller(self) -> IWifiInterfaceController: ...

@@ -40,7 +40,7 @@ class IWifiDriver(ABC):
 
     @property
     @abstractmethod
-    def driver_type(self) -> DriverType:
+    def _driver_type(self) -> DriverType:
         """The driver type that this driver implements
 
         Returns:
@@ -49,7 +49,7 @@ class IWifiDriver(ABC):
 
     @property
     @abstractmethod
-    def system_language(self) -> SystemLanguage:
+    def _system_language(self) -> SystemLanguage:
         """The system language of this driver
 
         Returns:
@@ -146,3 +146,20 @@ class IWifiDriver(ABC):
         Returns:
             bool: True if the request was successful, False otherwise
         """
+
+
+class IWifiInterfaceController(ABC):
+    @abstractmethod
+    async def connect(self, ssid: str, password: str, timeout: float) -> bool: ...
+    @abstractmethod
+    async def scan(self, timeout: float) -> set[str]: ...
+    @abstractmethod
+    async def disconnect(self) -> bool: ...
+    @abstractmethod
+    async def is_enabled(self) -> bool: ...
+    @abstractmethod
+    async def enable(self, enable: bool) -> bool: ...
+    @abstractmethod
+    def get_connection_state(self) -> tuple[ConnectionState, str]: ...
+    @abstractmethod
+    def get_scan_state(self) -> ScanState: ...

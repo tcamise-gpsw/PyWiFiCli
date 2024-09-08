@@ -6,11 +6,11 @@ from pywificli.domain.metadata import DriverType, SystemLanguage
 
 class EnglishLinuxNmcli(IWifiDriver):
     @property
-    def driver_type(self) -> DriverType:
+    def _driver_type(self) -> DriverType:
         raise NotImplementedError
 
     @property
-    def system_language(self) -> SystemLanguage:
+    def _system_language(self) -> SystemLanguage:
         raise NotImplementedError
 
     async def get_available_interfaces(self) -> set[str]:
