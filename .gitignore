@@ -1,5 +1,4 @@
-/.vscode/
-!/.vscode/launch.json
+/.vscode/settings.json
 /.git/
 
 # Byte-compiled / optimized / DLL files

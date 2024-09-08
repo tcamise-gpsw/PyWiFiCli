@@ -439,9 +439,9 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>test_report.html</h1>
-    <p>Report generated on 07-Sep-2024 at 21:36:34 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 07-Sep-2024 at 22:12:40 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Summary</h2>
-    <p>1 tests ran in 0.10 seconds. </p>
+    <p>1 tests ran in 0.19 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -456,9 +456,23 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/unit/test_setup.py::test_setup</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">tests/unit/test_cmd.py::test_echo_cli</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor
+DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor
+DEBUG    root:conftest.py:33 ################################################################################
+DEBUG    root:conftest.py:34 Test &#x27;tests/unit/test_cmd.py::test_echo_cli&#x27; STARTED
+DEBUG    root:conftest.py:35 ################################################################################<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    pywificli.util:util.py:42 Sending command ==&gt; ls
+DEBUG    pywificli.util:util.py:52 Exited with 0]
+DEBUG    pywificli.util:util.py:57 [stdout]
+                                   docs
+                                   LICENSE
+                                   noxfile.py
+                                   poetry.lock
+                                   pyproject.toml
+                                   pywificli
+                                   README.md
+                                   tests<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor<br/></div></td></tr></tbody></table></body></html>

@@ -56,9 +56,8 @@ class IWifiDriver(ABC):
             SystemLanguage: Driver System Language
         """
 
-    @property
     @abstractmethod
-    def available_interfaces(self) -> set[str]:
+    async def get_available_interfaces(self) -> set[str]:
         """Get all of the currently available WiFi interfaces
 
         Returns:
@@ -66,7 +65,7 @@ class IWifiDriver(ABC):
         """
 
     @abstractmethod
-    def is_adapter_enabled(self, interface: str) -> bool:
+    async def is_adapter_enabled(self, interface: str) -> bool:
         """Is the Wifi Adapter currently enabled?
 
         Args:
@@ -77,12 +76,12 @@ class IWifiDriver(ABC):
         """
 
     @abstractmethod
-    async def scan(self, interface: str, timeout: int) -> list[ScanResult]:
+    async def scan(self, interface: str, timeout: float) -> list[ScanResult]:
         """Scan for SSIDs on a given interface
 
         Args:
             interface (str): interface to use
-            timeout (int): how long to scan for
+            timeout (float): how long to scan for (in seconds)
 
         Returns:
             list[ScanResult]: list of available SSIDs
@@ -90,14 +89,14 @@ class IWifiDriver(ABC):
 
     # TODO retries here? or above?
     @abstractmethod
-    async def connect(self, interface: str, ssid: str, password: str, timeout: int) -> bool:
+    async def connect(self, interface: str, ssid: str, password: str, timeout: float) -> bool:
         """Connect to a given SSID
 
         Args:
             interface (str): interface to use
             ssid (str): target SSID to connect to
             password (str): password of SSID
-            timeout (int): how long to attempt to connect before giving up
+            timeout (float): how long to attempt to connect before giving up (in seconds)
 
         Returns:
             bool: True if the connection was established, False otherwise

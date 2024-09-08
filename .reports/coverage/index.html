@@ -11,7 +11,7 @@
 <header>
     <div class="content">
         <h1>Coverage report:
-            <span class="pc_cov">0%</span>
+            <span class="pc_cov">55%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -26,6 +26,8 @@
                         <kbd>s</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
+                        <kbd>b</kbd>
+                        <kbd>p</kbd>
                         <kbd>c</kbd>
                         &nbsp; change column sorting
                     </p>
@@ -45,7 +47,7 @@
         </form>
         <p class="text">
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
-            created at 2024-09-07 21:36 -0700
+            created at 2024-09-07 22:12 -0700
         </p>
     </div>
 </header>
@@ -57,12 +59,16 @@
                 <th aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements</th>
                 <th aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing</th>
                 <th aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="b">branches</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="p">partial</th>
                 <th class="right" aria-sort="none" data-shortcut="c">coverage</th>
             </tr>
         </thead>
         <tbody>
             <tr class="file">
                 <td class="name left"><a href="d_ef83a22b42d99c87___init___py.html">pywificli\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -73,30 +79,65 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_4f79b289296271dd_driver_py.html">pywificli\domain\driver.py</a></td>
-                <td>39</td>
-                <td>39</td>
+                <td>38</td>
+                <td>38</td>
                 <td>0</td>
-                <td class="right" data-ratio="0 39">0%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 40">0%</td>
             </tr>
             <tr class="file">
                 <td class="name left"><a href="d_4f79b289296271dd_metadata_py.html">pywificli\domain\metadata.py</a></td>
                 <td>9</td>
                 <td>9</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 9">0%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_ef83a22b42d99c87_exceptions_py.html">pywificli\exceptions.py</a></td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 3">67%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_ef83a22b42d99c87_logging_py.html">pywificli\logging.py</a></td>
+                <td>63</td>
+                <td>12</td>
+                <td>0</td>
+                <td>14</td>
+                <td>6</td>
+                <td class="right" data-ratio="59 77">77%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_ef83a22b42d99c87_util_py.html">pywificli\util.py</a></td>
+                <td>27</td>
+                <td>3</td>
+                <td>0</td>
+                <td>10</td>
+                <td>4</td>
+                <td class="right" data-ratio="30 37">81%</td>
             </tr>
         </tbody>
         <tfoot>
             <tr class="total">
                 <td class="name left">Total</td>
-                <td>48</td>
-                <td>48</td>
+                <td>140</td>
+                <td>63</td>
                 <td>0</td>
-                <td class="right" data-ratio="0 48">0%</td>
+                <td>26</td>
+                <td>10</td>
+                <td class="right" data-ratio="91 166">55%</td>
             </tr>
         </tfoot>
     </table>
@@ -108,11 +149,11 @@
     <div class="content">
         <p>
             <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
-            created at 2024-09-07 21:36 -0700
+            created at 2024-09-07 22:12 -0700
         </p>
     </div>
     <aside class="hidden">
-        <a id="prevFileLink" class="nav" href="d_4f79b289296271dd_metadata_py.html"/>
+        <a id="prevFileLink" class="nav" href="d_ef83a22b42d99c87_util_py.html"/>
         <a id="nextFileLink" class="nav" href="d_ef83a22b42d99c87___init___py.html"/>
         <button type="button" class="button_prev_file" data-shortcut="["/>
         <button type="button" class="button_next_file" data-shortcut="]"/>
