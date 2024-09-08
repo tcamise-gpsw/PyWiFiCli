@@ -1,4 +1,5 @@
 import pytest
+
 from pywificli.components.driver_factory import WifiDriverFactory
 from pywificli.domain.metadata import DriverType, SystemLanguage
 

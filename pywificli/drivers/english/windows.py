@@ -1,12 +1,12 @@
 """Windows driver for English System Language"""
 
-import enum
 import asyncio
+import enum
+import html
+import logging
 import os
 import re
-import html
 import tempfile
-import logging
 
 from pywificli.domain.driver import ConnectionState, IWifiDriver, ScanResult, ScanState
 from pywificli.domain.metadata import DriverType, SystemLanguage

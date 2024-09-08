@@ -1,24 +1,25 @@
 """Entrypoint for a client to get a suitable WifiDriver"""
 
-import os
-import locale
 import ctypes
+import locale
+import os
 import platform
-from shutil import which
 from getpass import getpass
+from shutil import which
+
 from packaging.version import Version
 
 from pywificli.domain.driver import IWifiDriver
 from pywificli.domain.metadata import DriverType, SystemLanguage
 from pywificli.drivers.english import (
-    EnglishLinuxNmcliLegacy,
-    EnglishLinuxWindows,
     EnglishLinuxMacOs,
     EnglishLinuxNmcli,
+    EnglishLinuxNmcliLegacy,
+    EnglishLinuxWindows,
     EnglishLinuxWpa,
 )
 from pywificli.exceptions import UnsupportedSystemConfiguration
-from pywificli.util import cmdOkOrRaise, cmd
+from pywificli.util import cmd, cmdOkOrRaise
 
 
 class WifiDriverFactory:

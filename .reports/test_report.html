@@ -439,10 +439,10 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>test_report.html</h1>
-    <p>Report generated on 07-Sep-2024 at 23:52:24 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 07-Sep-2024 at 23:56:57 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Summary</h2>
-    <p>0 tests ran in 0.23 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 0.32 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -452,4 +452,52 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable" col="duration">Duration</th>
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/unit/test_cmd.py::test_echo_cli</td>
+          <td class="col-duration">0.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor
+DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor
+DEBUG    root:conftest.py:33 ################################################################################
+DEBUG    root:conftest.py:34 Test &#x27;tests/unit/test_cmd.py::test_echo_cli&#x27; STARTED
+DEBUG    root:conftest.py:35 ################################################################################<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    pywificli.util:util.py:92 Sending command ==&gt; ls
+DEBUG    pywificli.util:util.py:102 Exited with 0]
+DEBUG    pywificli.util:util.py:107 [stdout]
+                                    docs
+                                    LICENSE
+                                    noxfile.py
+                                    poetry.lock
+                                    pyproject.toml
+                                    pywificli
+                                    README.md
+                                    scan_ssids.log
+                                    tests<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/unit/test_factory.py::test_system_language_is_detected_correctly</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor
+DEBUG    root:conftest.py:33 ################################################################################
+DEBUG    root:conftest.py:34 Test &#x27;tests/unit/test_factory.py::test_system_language_is_detected_correctly&#x27; STARTED
+DEBUG    root:conftest.py:35 ################################################################################<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/unit/test_factory.py::test_driver_type_is_detected_correctly</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor
+DEBUG    root:conftest.py:33 ################################################################################
+DEBUG    root:conftest.py:34 Test &#x27;tests/unit/test_factory.py::test_driver_type_is_detected_correctly&#x27; STARTED
+DEBUG    root:conftest.py:35 ################################################################################<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    asyncio:proactor_events.py:626 Using proactor: IocpProactor<br/></div></td></tr></tbody></table></body></html>
