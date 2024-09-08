@@ -3,6 +3,6 @@ API Reference
 
 TODO
 
-.. autoclass:: pywificli.domain.model.BaseModel
+.. automodule:: pywificli.domain.driver
 
-.. autoclass:: pywificli.domain.model.Model
+.. automodule:: pywificli.domain.metadata
