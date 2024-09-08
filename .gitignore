@@ -1,5 +1,6 @@
 /.reports
-/.vscode/settings.json
+/.vscode/
+!/.vscode/launch.json
 /.git/
 
 # Byte-compiled / optimized / DLL files
